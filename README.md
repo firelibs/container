@@ -364,24 +364,23 @@ Let's move previous example of mailing system to a provider trait:
                 $message->setFrom($config->mailFromAddress);
                 return $message;
             });
-            
-            /**
-             * Retrieves mailer service in lazy mode.
-             *
-             * @return Mailer
-             */
-            public function getMailer(){
-                return $this->service(Mailer::class);
-            }
-            
-            /**
-             * Create new message each time.
-             *
-             * @return EmailMessage
-             */
-            public function createEmailMessage(){
-                return $this->factory(EmailMessage::class);
-            }
+        }    
+        /**
+         * Retrieves mailer service in lazy mode.
+         *
+         * @return Mailer
+         */
+        public function getMailer(){
+            return $this->service(Mailer::class);
+        }
+        
+        /**
+         * Create new message each time.
+         *
+         * @return EmailMessage
+         */
+        public function createEmailMessage(){
+            return $this->factory(EmailMessage::class);
         }
     }
 
