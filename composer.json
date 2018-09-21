@@ -1,0 +1,23 @@
+{
+  "name": "firelibs/container",
+  "version": "2.0.2",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.3",
+    "squizlabs/php_codesniffer": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "FiReLibs\\Container\\": "./"
+    }
+  },
+  "scripts": {
+    "cs-check": "./vendor/bin/phpcs",
+    "cs-fix": "./vendor/bin/phpcbf",
+    "test": "./vendor/bin/phpunit"
+  }
+}
